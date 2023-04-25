@@ -14,12 +14,6 @@
     </p>
     <div class="flex justify-between items-center p-3">
       <YoutubeButton href="meal.strYoutube"> Youtube </YoutubeButton>
-      <!-- <router-link
-          to="/"
-          class="p-3 py-2 rounded border border-purple-600 hover:bg-purple-500 hover:text-white transition-colors"
-        >
-          View
-        </router-link> -->
     </div>
   </div>
 </template>

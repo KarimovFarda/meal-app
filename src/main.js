@@ -6,7 +6,6 @@ import store from "./store"
 import './assets/main.css'
 
 
-
 createApp(App)
     .use(router)
     .use(store)

@@ -13,9 +13,8 @@
       <h3 class="text-2xl font-bold mb-2">{{ ingredient.strIngredient }}</h3>
       <p>{{ ingredient.strDescription }}</p>
     </router-link>
-    <!-- <MealItem v-for="meal of meals" :key="meal.idMeal" :meal="meal" /> -->
+
   </div>
-  <!-- <div v-if="!meals.length" class="flex justify-center">There are no meals</div> -->
 </template>
 
 
@@ -32,14 +31,11 @@ const keyword = ref("");
 const computedIngredients = computed(() => {
   if (!computedIngredients) return ingredients;
   return ingredients.value.filter((i) =>
-    // i.strDescription.toLowerCase().includes(keyword.value.toLowerCase()) ||
     i.strIngredient.toLowerCase().includes(keyword.value.toLowerCase())
   );
 });
 
-// grid grid-cols-1 md:grid-cols-3 gap-5
 onMounted(() => {
-  // store.dispatch("searchMealsByIngredient", route.params.ingredient);
   axiosClient.get("list.php?i=list").then(({ data }) => {
     ingredients.value = data.meals;
   });

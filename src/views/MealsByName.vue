@@ -23,7 +23,6 @@ import YoutubeButton from "../components/YoutubeButton.vue";
 import MealItem from "../components/MealItem.vue";
 
 const keyword = ref("");
-console.log(store.state.searchedMeals);
 const meals = computed(() => store.state.searchedMeals);
 const route = useRoute();
 function searchMeals() {

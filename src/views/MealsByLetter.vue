@@ -22,9 +22,6 @@ const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 const meals = computed(() => store.state.mealsByLetter);
 const route = useRoute();
 
-// <div class="grid grid-cols-1 md:grid-cols-3 gap-5 p-8">
-//   <MealItem v-for="meal of meals" :key="meal.idMeal" :meal="meal" />
-// </div>
 
 watch(route, () => {
   store.dispatch("searchMealsByLetter", route.params.letter);

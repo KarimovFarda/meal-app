@@ -49,7 +49,6 @@ onMounted(() => {
   axiosClient.get(`lookup.php?i=${route.params.id}`).then(({ data }) => {
     meal.value = data.meals[0];
     console.log(data);
-    // commit("setSearchedMeals", data.meals);
   });
 });
 </script>
